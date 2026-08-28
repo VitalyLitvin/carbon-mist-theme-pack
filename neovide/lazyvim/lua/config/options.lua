@@ -5,19 +5,47 @@
 vim.g.autoformat = false
 vim.opt.winblend = 12
 vim.opt.pumblend = 12
+vim.opt.cursorline = true
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font:h14"
-  vim.g.neovide_cursor_animation_length = 0.04
-  vim.g.neovide_cursor_trail_size = 0.5
+  vim.o.linespace = 1
+
+  vim.g.neovide_cursor_animation_length = 0.06
+  vim.g.neovide_cursor_short_animation_length = 0.03
+  vim.g.neovide_cursor_trail_size = 0.6
+  vim.g.neovide_cursor_smooth_blink = true
   vim.g.neovide_scroll_animation_length = 0.2
-  vim.g.neovide_opacity = 0.10
+
+  -- Матовое стекло: окно прозрачнее, контент плотнее
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_normal_opacity = 0.9
   vim.g.neovide_window_blurred = true
-  vim.g.neovide_background_color = "#2b2b2b"
+
+  -- Отступы как в wezterm, дают рамку из размытого фона
+  vim.g.neovide_padding_top = 14
+  vim.g.neovide_padding_bottom = 12
+  vim.g.neovide_padding_left = 18
+  vim.g.neovide_padding_right = 18
+
+  -- Мягкие скруглённые плавающие окна
+  vim.g.neovide_floating_blur_amount_x = 12.0
+  vim.g.neovide_floating_blur_amount_y = 12.0
+  vim.g.neovide_floating_corner_radius = 0.15
+
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_refresh_rate = 120
   vim.g.neovide_refresh_rate_idle = 5
-  vim.o.linespace = 1
+
+  -- Плавное мигание курсора требует blink*-параметров в guicursor
+  vim.opt.guicursor = {
+    "n-v-c:block,i-ci-ve:ver25,r-cr-o:hor20",
+    "a:blinkon-500-blinkoff-300-blinkwait-300",
+  }
+
+  -- При желании: эффекты за курсором ("ripple", "torpedo", "pixiedust", ...)
+  -- vim.g.neovide_cursor_vfx_mode = "ripple"
+
   -- Cmd+V paste в Neovide
   vim.keymap.set({ "n", "v", "i", "c" }, "<D-v>", function()
     vim.api.nvim_paste(vim.fn.getreg("+"), true, -1)
@@ -27,8 +55,10 @@ end
 -- Keep active/inactive windows visually identical and remove italic styles.
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "#2b2b2b" })
-    vim.api.nvim_set_hl(0, "NormalNC", { bg = "#2b2b2b" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "#161616" })
+    vim.api.nvim_set_hl(0, "NormalNC", { bg = "#161616" })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#262626" })
+    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#a5c5ff", bold = true })
     local no_italic = {
       "Comment", "SpecialComment", "Keyword", "Conditional", "Repeat", "Label",
       "Operator", "Exception", "Include", "Define", "PreProc", "Type", "Function",
@@ -39,4 +69,3 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end
   end,
 })
-

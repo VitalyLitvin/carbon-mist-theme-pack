@@ -47,7 +47,7 @@ config.cursor_thickness = 2
 
 -- ── Carbonfox palette ─────────────────────────────────────────────────
 local gh = {
-  bg        = '#161616',
+  bg        = '#2a2a2a',
   bg_deep   = '#0f0f0f',
   bg_soft   = '#202020',
   bg_hover  = '#2a2a2a',
@@ -73,7 +73,7 @@ config.colors = {
   selection_fg  = gh.fg_bright,
   selection_bg  = '#2a2a2a',
   scrollbar_thumb = gh.border,
-  split         = gh.border,
+  split         = gh.bg,
 
   ansi = {
     '#282828', gh.red, gh.green, gh.yellow,
@@ -101,7 +101,7 @@ config.window_frame = {
   inactive_titlebar_bg = gh.bg_deep,
 }
 
-config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.75 }
+config.inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 }
 
 -- ── Tab bar ───────────────────────────────────────────────────────────
 config.enable_tab_bar = true

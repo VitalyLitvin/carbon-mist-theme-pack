@@ -18,8 +18,8 @@ if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.2
 
   -- Матовое стекло: окно прозрачнее, контент плотнее
-  vim.g.neovide_opacity = 0.7
-  vim.g.neovide_normal_opacity = 0.8
+  vim.g.neovide_opacity = 0.5
+  vim.g.neovide_normal_opacity = 0.75
   vim.g.neovide_window_blurred = true
 
   -- Отступы как в wezterm, дают рамку из размытого фона
@@ -55,9 +55,13 @@ end
 -- Keep active/inactive windows visually identical and remove italic styles.
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "#202020" })
-    vim.api.nvim_set_hl(0, "NormalNC", { bg = "#202020" })
-    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#2a2a2a" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "#484848" })
+    vim.api.nvim_set_hl(0, "NormalNC", { bg = "#484848" })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#555555" })
+    vim.api.nvim_set_hl(0, "NeoTreeNormal", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#484848", bg = "#484848" })
     vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#a5c5ff", bold = true })
     local no_italic = {
       "Comment", "SpecialComment", "Keyword", "Conditional", "Repeat", "Label",

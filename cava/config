@@ -287,14 +287,14 @@ foreground = '#78A9FF'
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of the screen
 gradient = 1
-gradient_color_1 = '#525253'
-gradient_color_2 = '#78A9FF'
-gradient_color_3 = '#33B1FF'
-gradient_color_4 = '#3DDBD9'
-gradient_color_5 = '#25be6a'
-gradient_color_6 = '#3DDBD9'
-gradient_color_7 = '#33B1FF'
-gradient_color_8 = '#BE95FF'
+gradient_color_1 = '#3a4150'
+gradient_color_2 = '#4a6db3'
+gradient_color_3 = '#78A9FF'
+gradient_color_4 = '#33B1FF'
+gradient_color_5 = '#5ec8ff'
+gradient_color_6 = '#8fd4ff'
+gradient_color_7 = '#b6e0ff'
+gradient_color_8 = '#c8e0ff'
 
 # Horizontal is only supported on noncurses output.
 # Only one color will be calculated per bar.

@@ -55,13 +55,13 @@ end
 -- Keep active/inactive windows visually identical and remove italic styles.
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "#484848" })
-    vim.api.nvim_set_hl(0, "NormalNC", { bg = "#484848" })
-    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#555555" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "#4a5260" })
+    vim.api.nvim_set_hl(0, "NormalNC", { bg = "#4a5260" })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#575f6e" })
     vim.api.nvim_set_hl(0, "NeoTreeNormal", { link = "Normal" })
     vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { link = "Normal" })
     vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { link = "Normal" })
-    vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#484848", bg = "#484848" })
+    vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#4a5260", bg = "#4a5260" })
     vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#a5c5ff", bold = true })
     local no_italic = {
       "Comment", "SpecialComment", "Keyword", "Conditional", "Repeat", "Label",

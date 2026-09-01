@@ -25,8 +25,8 @@ config.freetype_render_target = 'HorizontalLcd'
 
 -- ── Window ────────────────────────────────────────────────────────────
 config.window_decorations = 'RESIZE'
-config.window_background_opacity = 0.94
-config.macos_window_background_blur = 30
+config.window_background_opacity = 0.87
+config.macos_window_background_blur = 40
 config.window_padding = { left = 18, right = 18, top = 14, bottom = 12 }
 config.adjust_window_size_when_changing_font_size = false
 config.native_macos_fullscreen_mode = true
@@ -47,11 +47,11 @@ config.cursor_thickness = 2
 
 -- ── Carbonfox palette ─────────────────────────────────────────────────
 local gh = {
-  bg        = '#2a2a2a',
-  bg_deep   = '#0f0f0f',
-  bg_soft   = '#202020',
-  bg_hover  = '#2a2a2a',
-  border    = '#525253',
+  bg        = '#262b33',
+  bg_deep   = '#1b1f26',
+  bg_soft   = '#222831',
+  bg_hover  = '#2e3540',
+  border    = '#454f5e',
   fg        = '#f2f4f8',
   fg_bright = '#ffffff',
   fg_muted  = '#7b7c80',
@@ -71,7 +71,7 @@ config.colors = {
   cursor_fg     = gh.bg,
   cursor_border = gh.blue,
   selection_fg  = gh.fg_bright,
-  selection_bg  = '#2a2a2a',
+  selection_bg  = '#33404f',
   scrollbar_thumb = gh.border,
   split         = gh.bg,
 

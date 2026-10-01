@@ -1,0 +1,78 @@
+# Theme: carbonfox (nightfox-inspired)
+# Main bg
+theme[main_bg]="#161616"
+
+# Main text color
+theme[main_fg]="#f2f4f8"
+
+# Title color for boxes
+theme[title]="#dfdfe0"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#78A9FF"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#2a2a2a"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#f2f4f8"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#7b7c80"
+
+# Color of text on top of graphs
+theme[graph_text]="#dfdfe0"
+
+# Background color of the percentage meters
+theme[meter_bg]="#282828"
+
+# Misc colors for processes box
+theme[proc_misc]="#33B1FF"
+
+# Box outline colors
+theme[cpu_box]="#525253"
+theme[mem_box]="#525253"
+theme[net_box]="#525253"
+theme[proc_box]="#525253"
+theme[div_line]="#525253"
+
+# Temperature graph colors
+theme[temp_start]="#25be6a"
+theme[temp_mid]="#3DDBD9"
+theme[temp_end]="#EE5396"
+
+# CPU graph colors
+theme[cpu_start]="#78A9FF"
+theme[cpu_mid]="#33B1FF"
+theme[cpu_end]="#BE95FF"
+
+# Mem/Disk meters
+theme[free_start]="#25be6a"
+theme[free_mid]="#3DDBD9"
+theme[free_end]="#33B1FF"
+
+theme[cached_start]="#33B1FF"
+theme[cached_mid]="#78A9FF"
+theme[cached_end]="#BE95FF"
+
+theme[available_start]="#3DDBD9"
+theme[available_mid]="#33B1FF"
+theme[available_end]="#78A9FF"
+
+theme[used_start]="#78A9FF"
+theme[used_mid]="#BE95FF"
+theme[used_end]="#EE5396"
+
+# Network graphs
+theme[download_start]="#33B1FF"
+theme[download_mid]="#3DDBD9"
+theme[download_end]="#25be6a"
+
+theme[upload_start]="#78A9FF"
+theme[upload_mid]="#BE95FF"
+theme[upload_end]="#EE5396"
+
+# Process gradient
+theme[process_start]="#33B1FF"
+theme[process_mid]="#78A9FF"
+theme[process_end]="#BE95FF"
